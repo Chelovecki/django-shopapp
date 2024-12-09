@@ -1,0 +1,40 @@
+{% extends 'shopapp/base.html' %}
+{% load i18n %}
+
+<style>
+    div {
+    max-width: 600px;
+    }
+</style>
+
+{% block title %}
+{{ product.name }} info
+
+{% endblock %}
+
+
+{% block body %}
+<h2>{% translate 'Info about' %} {{ product.name }}</h2>
+<br>
+
+<ul>
+    <li>{% translate 'Description' %}: <p>{{ product.description }}</p></li>
+    <li>{% translate 'Price' %}: {{ product.price }}</li>
+    <li>{% translate 'Discount' %}: {{ product.discount }}</li>
+    <!--
+    можно было бы, конечно, сделать ссылку на пользователя, но это надо заморачиваться
+    с ссылками: account/1/info и так далее. пусть останется только юзернейм
+    -->
+    <li>{% translate 'Creator' %}: `{{ product.created_by }}`</li>
+    <li>{% translate 'Archived' %}: {{ product.is_archived }}</li>
+</ul>
+
+<h2>{% translate 'Another links' %}</h2>
+<br>
+<ul>
+    <li><a href="{% url 'shopapp:products_list' %}">{% translate 'Back' %}</a></li>
+    <li><a href="{% url 'shopapp:product_update' pk=product.pk %}">{% translate 'Change' %}</a></li>
+    <li><a href="{% url 'shopapp:product_archive' pk=product.pk  %}">{% translate 'Archive' %}!</a></li>
+</ul>
+{% endblock %}
+

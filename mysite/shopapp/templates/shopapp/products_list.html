@@ -1,0 +1,49 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+
+{% load cache %}
+
+
+{% block title %}
+{% translate 'Products List' %}
+{% endblock %}
+
+
+{% block body %}
+<h1>{% translate 'Here presented list of available products ⬇️.' %}
+    {% blocktranslate count products_count=products|length %}
+        There are one product
+        {% plural %}
+        There are {{ products_count }} products
+    {% endblocktranslate %}
+</h1>
+
+
+{% if products %}
+    <ul>
+        {%for product in products %}
+            <li>
+                <h2><a href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a> ({{ product.price }}$)</h2>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {% if perms.shopapp.create_product %}
+        <div>
+            <a href="{% url 'shopapp:product_create' %}">
+                {% translate 'Create a new product' %}
+            </a>
+        </div>
+    {% endif %}
+
+{% else %}
+    <h3>{% translate 'No products yet' %}</h3>
+    {% if perms.shopapp.create_product %}
+        <a href="{% url 'shopapp:product_create' %}">{% translate 'Create a new product' %}</a>
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'user_auth/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% translate 'Welcome' %}
+{% endblock %}
+
+{% block body %}
+<h1>{% translate 'Welcome on our site' %}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <label for="username">{% translate 'Username' %}:</label>
+        <input type="text" id="username" name="username" required>
+    </p>
+
+    <p>
+        <label for="password">{% translate 'Password' %}:</label>
+        <input type="password" id="password" name="password" required>
+    </p>
+
+    <div><button type="submit">{% translate 'Login' %}</button></div>
+</form>
+
+{% endblock %}

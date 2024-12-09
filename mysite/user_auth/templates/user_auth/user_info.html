@@ -1,0 +1,97 @@
+{% extends 'user_auth/base.html' %}
+{% load i18n %}
+{% block title %}{% translate 'About user #{{ user.pk }}' %}{% endblock %}
+
+{% block body %}
+<h1>{% translate 'Here is full info about user' %} `{{ user.username }}`</h1>
+{% if user.is_authenticated %}
+<br>
+
+{% if user.profile %}
+    <h2>{% translate 'User avatar' %}</h2>
+    {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url }}" alt="{{ user.profile.avatar.name }}">
+    {% else %}
+        {% if can_update_info %}
+            <div>{% translate 'No pic yet. ' %}<a href="{% url 'user_auth:update_profile' pk=user.profile.pk %}">{% translate 'User avatar' %}}</a></div>
+        {% endif %}
+    {% endif %}
+{% endif %}
+<hr>
+
+<h2>{% translate 'User info:' %}</h2>
+<ul>
+    <li>{% translate 'Id' %} = {{ user.id }}</li>
+    <li>{% translate 'Username' %}: {{ user.username }}</li>
+    <li>{% translate 'Last name' %}: {{ user.last_name }}</li>
+    <li>{% translate 'Email' %}: {{ user.email }}</li>
+    <li>{% translate 'Date joined' %}: {{ user.date_joined }}</li>
+
+    {% if can_update_info %}
+        <li><a href="{% url 'user_auth:update_user' pk=user.pk %}">{% translate 'Update info' %}</a></li>
+    {% endif %}
+</ul>
+
+
+<hr>
+
+<h2>Profile info:</h2>
+{% if user.profile %}
+    <ul>
+        <li>{% translate 'Last name' %}: {{ user.profile.last_name }}</li>
+        <li>{% translate 'First name' %}: {{ user.profile.first_name }}</li>
+        <li>{% translate 'Middle name' %}: {{ user.profile.middle_name }}</li>
+        <li>{% translate 'Number' %}: {{ user.profile.number }}</li>
+        <li>{% translate 'Bio' %}: {{ user.profile.bio }}</li>
+        <li>{% translate 'Had agree to save his personal data' %}: {{ user.profile.agree_save_data }}</li>
+    {% if can_update_info %}
+        <li><a href="{% url 'user_auth:update_profile' pk=user.pk %}">Update info</a></li>
+    {% endif %}
+    </ul>
+
+
+{% else %}
+    {% if can_update_info %}
+        <div>{% translate 'No profile info' %}. <a href="{% url 'user_auth:create_profile' pk=user.pk %}">{% translate 'Create' %}!</a></div>
+    {% endif %}
+{% endif %}
+<hr>
+
+{% if products %}
+    <h2>{% translate 'Created such products' %}:</h2>
+    <ul>
+        {% for product in products %}
+        <li>
+            <a href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <h2>{% translate 'No created products yet' %}</h2>
+    {% if can_update_info %}
+        <a href="{% url 'shopapp:product_create' %}">{% translate 'Create a new one' %}</a>
+    {% endif %}
+{% endif %}
+<hr>
+
+<h2>{% translate 'Logout' %}</h2>
+    <form action="{% url 'user_auth:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">{% translate 'Logout' %}</button>
+    </form>
+
+
+<hr>
+<h2>{% translate 'List with top 100 users' %}</h2>
+<ul>
+    {% for us in users %}
+        <li><a href="{% url 'user_auth:user_info' pk=us.pk %}">{{ us.username }}</a></li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <h1>{% translate 'User is Anonymous' %}</h1>
+{% endif %}
+
+{% endblock %}

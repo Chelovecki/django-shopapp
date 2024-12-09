@@ -1,0 +1,17 @@
+{% extends 'user_auth/base.html' %}
+{% load i18n %}
+
+{% block title %}{% translate 'Add profile for user' %}{% endblock %}
+
+
+{% block body %}
+<h1>{% translate 'Here you are can create a profile for you!' %}</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="{% translate 'YES, create' %}!">
+</form>
+{% endblock %}

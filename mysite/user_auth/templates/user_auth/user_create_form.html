@@ -1,0 +1,16 @@
+{% extends 'user_auth/base.html' %}
+{% load i18n %}
+{% block title %}{% translate 'Create a new user' %}{% endblock %}
+
+
+{% block body %}
+<h1>{% translate 'Here you are can add new user' %}</h1>
+
+<form method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="{% translate 'YES, create' %}!">
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'shopapp/base.html' %}
+
+{% load i18n %}
+
+{% block title %}
+{% translate 'Orders' %})
+{% endblock %}
+
+{% block body %}
+<h1> {% translate 'Here is an order' %} #{{ order.pk }}⬇️</h1>
+
+<ul>
+    <li>{% translate 'User' %}: `{{ order.user }}`</li>
+    <li>{% translate 'Promocode' %}: {{ order.promocode }}</li>
+    <li>{% translate 'Delivery to' %}: {{ order.delivery_address }}</li>
+    <li>{% translate 'Items in order' %}:</li>
+
+    {%for product in order.products.all %}
+    <ul>
+        <li>
+            <a href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a> {% translate 'for' context 'item for price' %} {{ product.price }}$
+        </li>
+    </ul>
+    {% endfor %}
+
+</ul>
+
+<hr>
+<h2><a href="{% url 'shopapp:orders_list' %}">{% translate 'Back to orders list' %}</a></h2>
+{% endblock %}

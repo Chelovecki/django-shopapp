@@ -1,0 +1,38 @@
+{% extends 'shopapp/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% translate 'Orders' %})
+{% endblock %}
+
+{% block body %}
+<h1>
+    {% translate 'Here presented avaliable orders ⬇️' %}
+    {% blocktranslate count num_orders=object_list|length %}
+        (total 1 order)
+        {% plural %}
+        (total {{ num_orders }} orders)
+    {% endblocktranslate %}
+</h1>
+
+{% if object_list %}
+    {% for order in object_list %}
+        <ul>
+            <li>
+                <a href="{% url 'shopapp:order_details' pk=order.pk %}">{% translate 'Order' %} #{{ order.id }} {% translate 'by' context 'ordered by user' %} {{ order.user }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+{% else %}
+
+    {% url 'shopapp:orders_create' as orders_create_url %}
+    {% blocktranslate %}
+    <h2>No orders yet, but you can <a href="orders_create_url">create</a> a new one :)</h2>
+    {% endblocktranslate %}
+{% endif %}
+
+<hr>
+<h2>
+    <a href="{% url 'shopapp:order_create' %}">{% translate 'Create new order' %}</a>
+</h2>
+{% endblock %}

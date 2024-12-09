@@ -1,0 +1,16 @@
+{% extends 'user_auth/base.html' %}
+{% load i18n %}
+
+{% block title %}{% translate 'Update user' %}{% endblock %}
+
+
+{% block body %}
+
+<form method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    <input type="submit" value="{% translate 'Update' %}">
+</form>
+
+{% endblock %}

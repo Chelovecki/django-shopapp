@@ -1,0 +1,409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-29 11:09+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\mysite\settings.py:122
+msgid "English"
+msgstr ""
+
+#: .\mysite\settings.py:123
+msgid "Russian"
+msgstr ""
+
+#: .\shopapp\models.py:9
+msgid "Name"
+msgstr ""
+
+#: .\shopapp\models.py:10 .\shopapp\templates\shopapp\product-details.html:21
+msgid "Description"
+msgstr ""
+
+#: .\shopapp\models.py:12 .\shopapp\templates\shopapp\product-details.html:22
+msgid "Price"
+msgstr ""
+
+#: .\shopapp\models.py:13 .\shopapp\templates\shopapp\product-details.html:23
+msgid "Discount"
+msgstr ""
+
+#: .\shopapp\models.py:25
+#, python-brace-format
+msgid "Product, name={n}, id={p}"
+msgstr ""
+
+#: .\shopapp\models.py:32 .\shopapp\templates\shopapp\order_details.html:13
+msgid "User"
+msgstr ""
+
+#: .\shopapp\models.py:34
+msgid "Delivery address"
+msgstr ""
+
+#: .\shopapp\models.py:35 .\shopapp\templates\shopapp\order_details.html:14
+msgid "Promocode"
+msgstr ""
+
+#: .\shopapp\models.py:38
+msgid "Products"
+msgstr ""
+
+#: .\shopapp\models.py:45
+#, python-brace-format
+msgid "Order №{pk} by {user}"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_create.html:7
+msgid "Here is a form to create a new order"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_create.html:12
+#: .\shopapp\templates\shopapp\product_form.html:17
+#: .\user_auth\templates\user_auth\about-user.html:55
+msgid "Create"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_create.html:19
+#, python-format
+msgid ""
+"\n"
+"    You can also <a href=\"%(orders_list_url)s\">go back to orders list</a>\n"
+"    "
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:6
+#: .\shopapp\templates\shopapp\order_list.html:5
+msgid "Orders"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:10
+msgid "Here is an order"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:15
+msgid "Delivery to"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:16
+msgid "Items in order"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:21
+msgctxt "item for price"
+msgid "for"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_details.html:29
+msgid "Back to orders list"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_list.html:10
+msgid "Here presented avaliable orders ⬇️"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_list.html:11
+#, python-format
+msgid ""
+"\n"
+"        (total 1 order)\n"
+"        "
+msgid_plural ""
+"\n"
+"        (total %(num_orders)s orders)\n"
+"    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\shopapp\templates\shopapp\order_list.html:22
+msgid "Order"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_list.html:22
+msgctxt "ordered by user"
+msgid "by"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_list.html:29
+msgid ""
+"\n"
+"    <h2>No orders yet, but you can <a href=\"orders_create_url\">create</a> "
+"a new one :)</h2>\n"
+"    "
+msgstr ""
+
+#: .\shopapp\templates\shopapp\order_list.html:36
+msgid "Create new order"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:17
+msgid "Info about"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:28
+msgid "Creator"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:29
+msgid "Archived"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:32
+msgid "Another links"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:35
+#: .\shopapp\templates\shopapp\product_confirm_delete.html:12
+msgid "Back"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:36
+msgid "Change"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product-details.html:37
+msgid "Archive"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_confirm_delete.html:6
+msgctxt "as a process"
+msgid "ARCHIVE"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_confirm_delete.html:10
+msgid "R u sure?"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_confirm_delete.html:18
+msgid "YES BABY ARCHIVE!"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_form.html:6
+msgid "Create new product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_form.html:10
+msgid "Creation a product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_form.html:22
+msgid "Back to products list"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_update_form.html:6
+msgid "Update product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_update_form.html:10
+msgid "Updating #{{ product.pk }}  product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_update_form.html:16
+#: .\user_auth\templates\user_auth\profile_update_form.html:12
+#: .\user_auth\templates\user_auth\user_update_form.html:13
+msgid "Update"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\product_update_form.html:19
+msgid "Back to product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\products-list.html:7
+msgid "Products List"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\products-list.html:12
+msgid "Here presented list of available products ⬇️."
+msgstr ""
+
+#: .\shopapp\templates\shopapp\products-list.html:13
+#, python-format
+msgid ""
+"\n"
+"        There are one product\n"
+"        "
+msgid_plural ""
+"\n"
+"        There are %(products_count)s products\n"
+"    "
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\shopapp\templates\shopapp\products-list.html:33
+#: .\shopapp\templates\shopapp\products-list.html:41
+msgid "Create a new product"
+msgstr ""
+
+#: .\shopapp\templates\shopapp\products-list.html:39
+msgid "No products yet"
+msgstr ""
+
+#: .\user_auth\models.py:17 .\user_auth\templates\user_auth\about-user.html:42
+msgid "First name"
+msgstr ""
+
+#: .\user_auth\models.py:18 .\user_auth\templates\user_auth\about-user.html:43
+msgid "Middle name"
+msgstr ""
+
+#: .\user_auth\models.py:19 .\user_auth\templates\user_auth\about-user.html:26
+#: .\user_auth\templates\user_auth\about-user.html:41
+msgid "Last name"
+msgstr ""
+
+#: .\user_auth\models.py:21
+msgid "Phone number"
+msgstr ""
+
+#: .\user_auth\models.py:23 .\user_auth\templates\user_auth\about-user.html:45
+msgid "Bio"
+msgstr ""
+
+#: .\user_auth\models.py:25
+msgid "Save personal data"
+msgstr ""
+
+#: .\user_auth\models.py:28
+msgid "Avatar"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:3
+msgid "About user #{{ user.pk }}"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:6
+msgid "Here is full info about user"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:11
+#: .\user_auth\templates\user_auth\about-user.html:16
+msgid "User avatar"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:16
+msgid "No pic yet. "
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:22
+msgid "User info:"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:24
+msgid "Id"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:25
+#: .\user_auth\templates\user_auth\login.html:14
+msgid "Username"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:27
+msgid "Email"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:28
+msgid "Date joined"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:31
+msgid "Update info"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:44
+msgid "Number"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:46
+msgid "Had agree to save his personal data"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:55
+msgid "No profile info"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:61
+msgid "Created such products"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:71
+msgid "No created products yet"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:73
+msgid "Create a new one"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:78
+msgid "Logout"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:81
+msgid "List with top 100 users"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\about-user.html:89
+msgid "User is Anonymous"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\login.html:5
+msgid "Welcome"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\login.html:9
+msgid "Welcome on our site"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\login.html:19
+msgid "Password"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\login.html:23
+msgid "Login"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\profile_create_form.html:4
+msgid "Add profile for user"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\profile_create_form.html:8
+msgid "Here you are can create a profile for you!"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\profile_create_form.html:15
+#: .\user_auth\templates\user_auth\user_create_form.html:14
+msgid "YES, create"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\profile_update_form.html:5
+msgid "Update profile"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\user_create_form.html:3
+msgid "Create a new user"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\user_create_form.html:7
+msgid "Here you are can add new user"
+msgstr ""
+
+#: .\user_auth\templates\user_auth\user_update_form.html:4
+msgid "Update user"
+msgstr ""
+
+#: .\user_auth\views.py:19
+msgid "welcomee bro: Hello World"
+msgstr ""

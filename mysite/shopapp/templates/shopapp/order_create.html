@@ -1,0 +1,22 @@
+{% extends 'shopapp/base.html' %}
+{% load i18n %}
+{% block title %}Create Order{% endblock %}
+
+
+{% block body %}
+<h1>{% translate 'Here is a form to create a new order' %}</h1>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="{% translate 'Create' %}">
+    </form>
+</div>
+<hr>
+
+<h3>
+    {% url 'shopapp:orders_list' as orders_list_url %}
+    {% blocktranslate %}
+    You can also <a href="{{ orders_list_url }}">go back to orders list</a>
+    {% endblocktranslate %}</h3>
+{% endblock %}
